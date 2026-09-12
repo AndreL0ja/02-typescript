@@ -29,8 +29,11 @@
  *   (Pista: usa id.toFixed(0).padStart(6, "0"))
  */
 export function formatearIdentificador(id: string | number): string {
-  // 👇 TODO: Escribe tu lógica con if (typeof id === "string") y reemplaza el return "":
-  return "";
+  if (typeof id === "string") {
+    return `ID-ALFANUMERICO-${id.toUpperCase()}`;
+  }
+
+  return `ID-NUMERICO-#${id.toFixed(0).padStart(6, "0")}`;
 }
 
 // ============================================================================
@@ -62,11 +65,19 @@ export type EstadoPantalla<T> =
 /**
  * TODO: Implementa `renderizarEstadoUI`.
  * Utiliza un `switch (estado.status)`:
- * - Si status === "LOADING": Retornar `⏳ Cargando datos (${estado.porcentaje}%)...`
- * - Si status === "SUCCESS": Retornar `🎉 Datos cargados con éxito a las ${estado.hora}`
+ * - Si status === "LOADING": Retornar `♥ Cargando datos (${estado.porcentaje}%)...`
  * - Si status === "ERROR": Retornar `❌ Error ${estado.codigo}: ${estado.mensaje}`
+ * - Si status === "SUCCESS": Retornar `☻ Datos cargados con éxito a las ${estado.hora}`
  */
 export function renderizarEstadoUI<T>(estado: EstadoPantalla<T>): string {
-  // 👇 TODO: Escribe tu switch(estado.status) aquí y reemplaza el return "":
-  return "";
+  switch (estado.status) {
+    case "LOADING":
+      return `⏳ Cargando datos (${estado.porcentaje}%)...`;
+    case "SUCCESS":
+      return `🎉 Datos cargados con éxito a las ${estado.hora}`;
+    case "ERROR":
+      return `❌ Error ${estado.codigo}: ${estado.mensaje}`;
+    default:
+      return "";
+  }
 }

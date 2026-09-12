@@ -20,8 +20,8 @@ export interface PerfilUsuario {
 
 export const usuarioEjemplo: PerfilUsuario = {
   id: "UETS-2026-001",
-  nombreCompleto: "Carlos Andrade",
-  correo: "estudiante@est.salesianos.edu.ec",
+  nombreCompleto: "Andre Loja",
+  correo: "andre.lojab.est@est.salesianos.edu.ec",
   rol: "ESTUDIANTE"
 };
 

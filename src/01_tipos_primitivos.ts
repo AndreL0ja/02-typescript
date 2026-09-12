@@ -10,7 +10,7 @@
 // PASO 1: Declaración de Variables Básicas y Tipos Primitivos
 // ============================================================================
 
-export const nombreEstudiante: string = "Carlos Andrade";
+export const nombreEstudiante: string = "André";
 export const edadEstudiante: number = 17;
 export const promedioObjetivo: number = 9.5;
 export const estaMatriculado: boolean = true;
